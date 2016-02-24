@@ -8,7 +8,6 @@ run with #        docker run -d -p 80:80 -v /etc/hosts:/hosts -t m2
 
 to make available from docker-host via http:, please run something like:
 
-#!/bin/bash
 HOSTS='m2.demo m2demo.local'
 IPS="$(docker inspect -f '{{.NetworkSettings.IPAddress }}' $(docker ps -q))";
 echo "$HOSTS" "$IPS" >> /etc/hosts
