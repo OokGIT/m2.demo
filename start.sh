@@ -15,7 +15,7 @@ trap "mysqladmin shutdown" TERM
 # Start MySQL in background
 mysqld_safe --bind-address=0.0.0.0 &
 
-# Waiit to end of all processes
+# Wait to end of all processes
 wait
 
 
